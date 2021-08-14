@@ -49331,28 +49331,28 @@ var Sketch = /*#__PURE__*/function () {
         transitions: [{
           name: 'from-home-transition',
           from: {
-            namespace: ["home"]
+            namespace: ['home']
           },
           leave: function leave(data) {
             that.animationRunning = true;
             that.asscroll.disable();
             return _gsap.default.timeline().to(data.current.container, {
-              opacity: 0.,
+              opacity: 0,
               duration: 0.5
             });
           },
           enter: function enter(data) {
             that.asscroll = new _asscroll.default({
               disableRaf: true,
-              containerElement: data.next.container.querySelector("[asscroll-container]")
+              containerElement: data.next.container.querySelector('[asscroll-container]')
             });
             that.asscroll.enable({
               newScrollElements: data.next.container.querySelector('.scroll-wrap')
             });
             return _gsap.default.timeline().from(data.next.container, {
-              opacity: 0.,
+              opacity: 0,
               onComplete: function onComplete() {
-                that.container.style.visibility = "hidden";
+                that.container.style.visibility = 'hidden';
                 that.animationRunning = false;
               }
             });
@@ -49360,7 +49360,7 @@ var Sketch = /*#__PURE__*/function () {
         }, {
           name: 'from-inside-page-transition',
           from: {
-            namespace: ["inside"]
+            namespace: ['inside']
           },
           leave: function leave(data) {
             that.asscroll.disable();
@@ -49368,13 +49368,13 @@ var Sketch = /*#__PURE__*/function () {
               duration: 0.3,
               y: 0
             }).to(data.current.container, {
-              opacity: 0.
+              opacity: 0
             });
           },
           enter: function enter(data) {
             that.asscroll = new _asscroll.default({
               disableRaf: true,
-              containerElement: data.next.container.querySelector("[asscroll-container]")
+              containerElement: data.next.container.querySelector('[asscroll-container]')
             });
             that.asscroll.enable({
               horizontalScroll: true,
@@ -49389,12 +49389,12 @@ var Sketch = /*#__PURE__*/function () {
             that.addObjects();
             that.resize();
             that.addClickEvents();
-            that.container.style.visibility = "visible";
+            that.container.style.visibility = 'visible';
             return _gsap.default.timeline().to('.curtain', {
               duration: 0.3,
-              y: "-100%"
+              y: '-100%'
             }).from(data.next.container, {
-              opacity: 0.
+              opacity: 0
             });
           }
         }]
@@ -49428,7 +49428,7 @@ var Sketch = /*#__PURE__*/function () {
         progress: 0
       };
       this.gui = new dat.GUI();
-      this.gui.add(this.settings, "progress", 0, 1, 0.001);
+      this.gui.add(this.settings, 'progress', 0, 1, 0.001);
     }
   }, {
     key: "resize",
@@ -49607,7 +49607,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63910" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64523" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

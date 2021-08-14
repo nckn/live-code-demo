@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "parcel index.html"
+  },
   "devDependencies": {
     "@parcel/transformer-image": "2.0.0-rc.0",
     "glslify-bundle": "^5.1.1",
