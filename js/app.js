@@ -42,7 +42,7 @@ export default class Sketch {
     })
 
     this.asscroll.enable({
-      horizontalScroll: !document.body.classList.contains('b-inside')
+      horizontalScroll: !document.body.classList.contains('b-subpage')
     })
     this.time = 0
     // this.setupSettings()
@@ -97,9 +97,9 @@ export default class Sketch {
           }
         },
         {
-          name: 'from-inside-page-transition',
+          name: 'from-subpage-transition',
           from: {
-            namespace: ['inside']
+            namespace: ['subpage']
           },
           leave (data) {
             that.asscroll.disable()

@@ -49309,7 +49309,7 @@ var Sketch = /*#__PURE__*/function () {
       disableRaf: true
     });
     this.asscroll.enable({
-      horizontalScroll: !document.body.classList.contains('b-inside')
+      horizontalScroll: !document.body.classList.contains('b-subpage')
     });
     this.time = 0; // this.setupSettings()
 
@@ -49358,9 +49358,9 @@ var Sketch = /*#__PURE__*/function () {
             });
           }
         }, {
-          name: 'from-inside-page-transition',
+          name: 'from-subpage-transition',
           from: {
-            namespace: ['inside']
+            namespace: ['subpage']
           },
           leave: function leave(data) {
             that.asscroll.disable();
@@ -49607,7 +49607,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50365" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50604" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
